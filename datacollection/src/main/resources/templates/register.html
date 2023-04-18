@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<title>Registration</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- LINEARICONS -->
+		<link rel="stylesheet" href="fonts/linearicons/style.css">
+
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<div class="inner">
+				<img src="images/image-1.png" alt="" class="image-1">
+
+				<div th:if="${session.message}" th:classappend="${session.message}"
+					 class="form-holder" role="alert">
+
+					<p th:text="${session.message}"></p>
+				</div>
+
+				<form th:action="@{/register}" method="post">
+					<h3>REGISTER NEW STUDENT</h3>
+					<div class="form-holder">
+						<span class="lnr lnr-user"></span>
+						<input name="firstname" type="text" class="form-control" placeholder="First Name">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-user"></span>
+						<input name="lastname" type="text" class="form-control" placeholder="Last Name">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-phone-handset"></span>
+						<input name="matricno" type="text" class="form-control" placeholder="Matric No">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-phone-handset"></span>
+						<input name="faculty" type="text" class="form-control" placeholder="Faculty">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-phone-handset"></span>
+						<input name="dept" type="text" class="form-control" placeholder="Department">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-envelope"></span>
+						<input name="email" type="text" class="form-control" placeholder="eMail">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-phone-handset"></span>
+						<input name="phoneno" type="text" class="form-control" placeholder="Phone Number">
+					</div>
+					<button>
+						<span>Register</span>
+					</button>
+				</form>
+				<img src="images/image-2.png" alt="" class="image-2">
+			</div>
+
+		</div>
+
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/main.js"></script>
+	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

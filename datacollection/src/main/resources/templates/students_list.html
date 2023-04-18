@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Students</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- LINEARICONS -->
+    <link rel="stylesheet" href="fonts/linearicons/style.css">
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+    <div class="inner">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Matric No</th>
+                    <th>Faculty</th>
+                    <th>Department</th>
+                    <th>Email</th>
+                    <th>Phone No</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="student : ${students}">
+                    <td th:text="${student.firstname}"></td>
+                    <td th:text="${student.lastname}"></td>
+                    <td th:text="${student.matricno}"></td>
+                    <td th:text="${student.faculty}"></td>
+                    <td th:text="${student.dept}"></td>
+                    <td th:text="${student.email}"></td>
+                    <td th:text="${student.phoneno}"></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
