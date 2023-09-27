@@ -45,6 +45,6 @@ public class MainController {
     public String addStudent (@ModelAttribute Student student, HttpSession session) {
         session.setAttribute("message", "Registration Successful");
         studentService.addStudent(student);
-        return "redirect:/";
+        return "redirect:/new_student";
     }
 }
